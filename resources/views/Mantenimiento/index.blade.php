@@ -6,7 +6,6 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <div class="pull-left"><h3>Lista Mantenimientos</h3>
-          <a href="..\..\..\client2\index.html">Angular</a>
           </div>
           <div class="pull-right">
             <div class="btn-group">
@@ -25,11 +24,15 @@
                <th style="width:400px;">Eliminar</th>
              </thead>
              <tbody>
+              <!-- 
               <p>{{$var1}}</p>
               <p>{{$total}}</p>
+              -->
+              <!--
               @foreach($reportes as $reporte)
               <p>{{$reporte->fecha}}</p>
-              @endforeach            
+              @endforeach
+              -->            
               @if($mantenimientos->count())  
               @foreach($mantenimientos as $mantenimiento)  
               <tr>

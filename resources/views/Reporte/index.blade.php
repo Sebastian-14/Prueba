@@ -49,13 +49,14 @@
               
               <td>
                  
-                  <select name="" id="">
+                  <!--<select name="" id="">
                     @foreach($mantenimientos as $mantenimiento)
-                    <option value="">
-                        <p>{{$mantenimiento->nombre}}</p>                      
+                    <option value="{{$mantenimiento->id}}">
+                        {{$mantenimiento->nombre}}                      
                     </option>  
                     @endforeach
                   </select>
+                -->
               </td>  
               <td></td>    
               <td><a class="btn btn-primary btn-xs" href="{{action('ReporteController@edit', $reporte->id)}}" ><span class="far fa-edit"></span></a></td>

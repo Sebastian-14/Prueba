@@ -81,10 +81,10 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
-        /*
+        
         'mongodb' => [ 
             'driver'    =>  'mongodb', 
-            'host'      =>  ['mongodb://sebas:14121999sebastian.@ds149742.mlab.com:49742/integrador'],
+            'host'      =>  ['localhost'],
             'port'      =>  env('DB_PORT',27017),
             'database'  =>  env('DB_DATABASE'),
             'username'  =>  env('DB_UERNAME'),
@@ -93,8 +93,8 @@ return [
                 'db'    =>'admin'
             ]
         ]
-        */
-
+        
+/*
         'mongodb' => [ 
             'driver'    =>  'mongodb', 
             'host'      =>  env('DB_HOST','sebastian:sebas123@ds149742.mlab.com:49742/integrador'),
@@ -103,7 +103,7 @@ return [
             'username'  =>  env('DB_UERNAME',sebastian),
             'password'  =>  env('DB_PASSWORD',sebas123)          
         ]
-
+*/
     ],
 
     /*

@@ -15,7 +15,7 @@
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
+                font-weight: 140;
                 height: 100vh;
                 margin: 0;
             }
@@ -80,8 +80,10 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    SISTEMA DE MANTENIMIENTO DE VEHICULOS
+                <div class="title">
+                    <div class="card">
+                        <h1>Sis. Mantenimiento Vehicular</h1>
+                    </div>                    
                 </div>
 <!--
                 <div class="links">

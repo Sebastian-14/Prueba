@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Reporte;
 use App\Mantenimiento;
 use App\Cliente;
+use App\Auto;
 use DB;
 
 class ReporteController extends Controller
@@ -35,9 +36,10 @@ class ReporteController extends Controller
         //$reportes = Reporte::orderBy('idR', 'desc')->get();
         $reportes=Reporte::orderBy('id')->paginate(5);
         $clientes=Cliente::all();
+        $autos=Auto::all();
         $mantenimientos=Mantenimiento::all();
         
-        return view('Reporte.index',compact('reportes','mantenimientos','clientes')); 
+        return view('Reporte.index',compact('reportes','mantenimientos','clientes','autos')); 
         //dd($reportes);
     }
 
@@ -50,7 +52,9 @@ class ReporteController extends Controller
     {
         //
         $clientes=Cliente::all();
-        return view('Reporte.create',compact('clientes'));
+        $autos=Auto::all();
+        $mantenimientos=Mantenimiento::all();
+        return view('Reporte.create',compact('clientes','autos','mantenimientos'));
     }
 
     public function store(Request $request){

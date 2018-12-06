@@ -59,7 +59,8 @@ Route::get('/',function(){
 });
 */
 
-
+Route::resource('auto','AutoController');
+Route::get('api/v1/autos','AutoController@getAutos');
 
 Route::resource('cliente', 'ClienteController');
 Route::get('api/v1/clientes','ClienteController@getClientes');

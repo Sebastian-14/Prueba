@@ -19,37 +19,61 @@
 			</div>
 			@endif
 
-			<div class="panel panel-default">
+			<div class="panel panel-default" style="padding-left:400px;">
 				
 				<div class="panel-heading">
 					<h3 class="panel-title">Nuevo Reporte</h3>
 				</div>
+				<div style="padding-top:140px;"></div>
 				<div class="panel-body">					
 					<div class="table-container">
 						<form method="POST" action="{{ route('reporte.store') }}" action="{{ route('reporte.store') }}"  role="form">
 							{{csrf_field()}}
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 colmd-6">
-									<div class="form-group" style="width:400px;">											
-										<!--<input type="text" name="idR" id="idR" class="form-control input-sm" placeholder="Nombre">-->
-										<select name="idR" id="idR">
+									<div class="form-group" style="width:1400px;">											
+								
+										<label for="">Seleccione cliente:</label>
+										<select name="cliente" id="cliente">
 												@foreach($clientes as $cliente)
-												<option value="">
+												<option value="{{$cliente->nombre}}">
 													<p>{{$cliente->nombre}}</p>                      
 												</option>  
 												@endforeach
-										</select>
-									
+										</select>									
 									</div>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-xs-6 col-sm-6 colmd-6">
-									<div class="form-group">
-
+									<div class="col-xs-6 col-sm-6 colmd-6">
+										<div class="form-group" style="width:1400px;">											
+											<!--<input type="text" name="idR" id="idR" class="form-control input-sm" placeholder="Nombre">-->
+											<label for="">Seleccione vehiculo:</label>
+											<select name="auto" id="auto">
+													@foreach($autos as $auto)
+													<option value="{{$auto->placa}}">
+														<p>{{$auto->placa}}</p>                      
+													</option>  
+													@endforeach
+											</select>									
+										</div>
 									</div>
 								</div>
-							</div>
+								<div class="row">
+										<div class="col-xs-6 col-sm-6 colmd-6">
+											<div class="form-group" style="width:1400px;">											
+												<!--<input type="text" name="idR" id="idR" class="form-control input-sm" placeholder="Nombre">-->
+												<label for="">Seleccione Mantenimiento:</label>
+												<select name="mantenimiento" id="mantenimiento">
+														@foreach($mantenimientos as $mantenimiento)
+														<option value="{{$mantenimiento->nombre}}">
+															<p>{{$mantenimiento->nombre}}</p>                      
+														</option>  
+														@endforeach
+												</select>									
+											</div>
+										</div>
+									</div>
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 colmd-12">
 									<input type="submit"  value="Guardar" class="btn btn-success btn-block">

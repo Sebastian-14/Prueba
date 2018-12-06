@@ -24,13 +24,26 @@
                <th>Editar</th>
                <th>Eliminar</th>
              </thead>
-             <tbody>
+             <tbody>               
               @if($users->count())  
               @foreach($users as $user)  
               <tr>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->created_at}}</td>
+                
+                <!--
+                  <td>
+                  
+                    @for($i=0;$i<$total;$i++)  
+                    @foreach ($users[0+$i]["role_ids"] as $q)
+                    {{$q}}<p>
+                        @endforeach 
+                        @endfor
+                    
+                    </td>
+                  -->
+
                 <td><a class="btn btn-primary btn-xs" href="{{action('UserController@edit', $user->id)}}" ><span class="far fa-edit"></span></a></td>
                 <td>
                   <form action="{{action('UserController@destroy', $user->id)}}" method="post">
@@ -41,7 +54,7 @@
                   </form>
                  </td>
                </tr>
-               @endforeach 
+               @endforeach
                @else
                <tr>
                 <td colspan="8">No hay registro !!</td>
@@ -49,6 +62,22 @@
               @endif
             </tbody>
           </table>
+          <p>
+           <!-- @for ($i = 1; $i < $total; $i++)              
+              @if($users[$i]["role_ids"]==2.0)
+                <td>Admin<p>
+                @else
+                <td>User</td>
+                @endif              
+            @endfor  
+                //si funciona
+              @for($i=0;$i<$total;$i++)  
+              @foreach ($users[0+$i]["role_ids"] as $q)
+              <td>{{$q}}<p>
+              @endforeach
+              @endfor
+              -->
+          </p>
         </div>
       </div>
     </div>
