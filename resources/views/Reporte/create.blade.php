@@ -35,9 +35,9 @@
 								
 										<label for="">Seleccione cliente:</label>
 										<select name="cliente" id="cliente">
-												@foreach($clientes as $cliente)
-												<option value="{{$cliente->nombre}}">
-													<p>{{$cliente->nombre}}</p>                      
+												@foreach($autos as $auto)
+												<option value="{{$auto->cliente}}">
+													<p>{{$auto->cliente}}</p>                      
 												</option>  
 												@endforeach
 										</select>									
@@ -51,9 +51,11 @@
 											<label for="">Seleccione vehiculo:</label>
 											<select name="auto" id="auto">
 													@foreach($autos as $auto)
+													@if($auto->cliente="Jerly")
 													<option value="{{$auto->placa}}">
 														<p>{{$auto->placa}}</p>                      
 													</option>  
+													@endif
 													@endforeach
 											</select>									
 										</div>

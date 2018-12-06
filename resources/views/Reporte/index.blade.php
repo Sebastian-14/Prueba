@@ -20,7 +20,7 @@
                
                <th style="width:300px;">Fecha-Hora</th>
                <th style="width:200px;">Cliente</th>
-               <th>Vehiculo</th>
+               <th style="width:300px;">Vehiculo</th>
                <th style="width:500px;">Detalle del Mantenimiento</th>
                <th>Costo</th>
                <th>Editar</th>
@@ -28,17 +28,13 @@
              </thead>
              <tbody>
               @if($reportes->count())  
-              <!--@for ($i = 1; $i < 3; $i++)
-              <td>{{$i}}</td>
-              @endfor
-              -->
-
               @foreach($reportes as $reporte) 
               <td>{{$reporte->created_at}}</td>             
               <td>{{$reporte->cliente}}</td>
               <td>{{$reporte->auto}}</td>
-              <td>{{$reporte->mant}}<td>                
-              </td>     
+              <td>{{$reporte->mant}}</td>
+              <td>{{$reporte->costo}}</td>
+
               <td><a class="btn btn-primary btn-xs" href="{{action('ReporteController@edit', $reporte->id)}}" ><span class="far fa-edit"></span></a></td>
                 <td>
                   <form action="{{action('ReporteController@destroy', $reporte->id)}}" method="post">
@@ -48,8 +44,7 @@
                   </form>
                  </td> 
                 </tr> 
-                @endforeach 
-                <td>Total</td>
+                @endforeach               
                 @else
                <tr>
                 <td colspan="8">No hay registro !!</td>
@@ -57,6 +52,9 @@
               @endif
             </tbody>
           </table>
+          <div>
+              Ganacias del día:  {{$total}}
+          </div>
         </div>
       </div>
     </div>

@@ -38,10 +38,11 @@ class ReporteController extends Controller
         $clientes=Cliente::all();
         $autos=Auto::all();
         $mantenimientos=Mantenimiento::all();
+        $total = Reporte::sum('costo');
         //$reportes=Reporte::orderBy('id')->paginate(5);
         $reportes=Reporte::all();
         
-        return view('reporte.index',compact('reportes','mantenimientos','clientes','autos')); 
+        return view('reporte.index',compact('reportes','mantenimientos','clientes','autos','total')); 
         //dd($reportes);
     }
 
