@@ -34,12 +34,14 @@ class ReporteController extends Controller
         //$reportes = Reporte::all();
         //$reportes = Reporte::find('517c43667db388101e00000f');
         //$reportes = Reporte::orderBy('idR', 'desc')->get();
-        $reportes=Reporte::orderBy('id')->paginate(5);
+        
         $clientes=Cliente::all();
         $autos=Auto::all();
         $mantenimientos=Mantenimiento::all();
+        //$reportes=Reporte::orderBy('id')->paginate(5);
+        $reportes=Reporte::all();
         
-        return view('Reporte.index',compact('reportes','mantenimientos','clientes','autos')); 
+        return view('reporte.index',compact('reportes','mantenimientos','clientes','autos')); 
         //dd($reportes);
     }
 
@@ -54,7 +56,7 @@ class ReporteController extends Controller
         $clientes=Cliente::all();
         $autos=Auto::all();
         $mantenimientos=Mantenimiento::all();
-        return view('Reporte.create',compact('clientes','autos','mantenimientos'));
+        return view('reporte.create',compact('clientes','autos','mantenimientos'));
     }
 
     public function store(Request $request){
@@ -66,11 +68,12 @@ class ReporteController extends Controller
 
     public function edit($id)
     {
-        //
+        /*
         $author = $book->author;
         $author->name = 'Jane Doe';
         $author->save();
-
+        */
+        
         $reporte=Reporte::find($id);
         return view('reporte.edit',compact('reporte'));
     }

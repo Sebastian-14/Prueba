@@ -10,7 +10,7 @@ class Reporte extends Eloquent
 
     protected $connection='mongodb';
     protected $collection='Reportes';
-    protected $fillable=['idR','fecha','idm'];
+    protected $fillable=['cliente','auto','mantenimiento'];
 
     public function mantenimiento()
     {

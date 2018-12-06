@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-<div class="row">
+<div class="row" style="padding-left:400px;">
   <section class="content">
     <div class="col-md-8 col-md-oﬀset-2" >
       <div class="panel panel-default">
@@ -18,7 +18,7 @@
              <thead class="thead-dark">
                <th style="width:400px;">Nombre</th>
                <th style="width:400px;">Descripcion</th>
-               <th style="width:400px;">Costo</th>
+               <th style="width:400px;">Costo(S/.)</th>
                <th style="width:400px;">Ver</th>
                <th style="width:400px;">Editar</th>
                <th style="width:400px;">Eliminar</th>

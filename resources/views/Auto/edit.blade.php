@@ -20,7 +20,7 @@
 	 	 	 @endif
 	 	 	 <div class="panel panel-default">
 	 	 	 	 <div class="panel-heading">
-	 	 	 	 	 <h3 class="panel-title">Nuevo Libro</h3>
+	 	 	 	 	 <h3 class="panel-title">Actualizar registros</h3>
 	 	 	 	 </div>
 	 	 	 	 <div class="panel-body">	 	 	 	 	 
 
@@ -30,18 +30,13 @@
 <input name="_method" type="hidden"
 value="PATCH">
 	 	 	 	 	 	 	 <div class="row">
-	 	 	 	 	 	 	 	 <div class="col-xs-12 col-sm-12 col-md-12">
-	 	 	 	 	 	 	 	 	 <div class="form-group">
-	 	 	 	 	 	 	 	 	 	 <input type="text"
-name="idcl" id="idcl" class="form-control input-sm" value="{{$auto->idcl}}">
-	 	 	 	 	 	 	 	 	 </div>
-	 	 	 	 	 	 	 	 </div>
-	 	 	 	 	 	 	 	  <div class="col-xs-12 col-sm-12 col-md-12">
-	 	 	 	 	 	 	 	 	 <div class="form-group">
-	 	 	 	 	 	 	 	 	 	 <input type="text"
-name="idau" id="idau" class="form-control input-sm" value="{{$auto->idau}}">
-	 	 	 	 	 	 	 	 	 </div>
-	 	 	 	 	 	 	 	 </div>
+									<div class="col-xs-12 col-sm-12 col-md-12">
+											<div class="form-group">
+												 <input type="text"
+name="placa" id="placa" class="form-control input-sm" value="{{$auto->cliente}}">
+											</div>
+									   </div>
+
 	 	 	 	 	 	 	 	 <div class="col-xs-12 col-sm-12 col-md-12">
 	 	 	 	 	 	 	 	 	 <div class="form-group">
 	 	 	 	 	 	 	 	 	 	 <input type="text"

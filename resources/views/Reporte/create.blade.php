@@ -27,7 +27,7 @@
 				<div style="padding-top:140px;"></div>
 				<div class="panel-body">					
 					<div class="table-container">
-						<form method="POST" action="{{ route('reporte.store') }}" action="{{ route('reporte.store') }}"  role="form">
+						<form method="POST" action="{{ route('reporte.store') }}" action="{{ route('auto.create') }}"  role="form">
 							{{csrf_field()}}
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 colmd-6">
@@ -64,10 +64,10 @@
 											<div class="form-group" style="width:1400px;">											
 												<!--<input type="text" name="idR" id="idR" class="form-control input-sm" placeholder="Nombre">-->
 												<label for="">Seleccione Mantenimiento:</label>
-												<select name="mantenimiento" id="mantenimiento">
+												<select name="mant" id="mant">
 														@foreach($mantenimientos as $mantenimiento)
-														<option value="{{$mantenimiento->nombre}}">
-															<p>{{$mantenimiento->nombre}}</p>                      
+														<option value="{{$mantenimiento->descripcion}}">
+															<p>{{$mantenimiento->descripcion}}</p>                      
 														</option>  
 														@endforeach
 												</select>									

@@ -21,29 +21,29 @@
 
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">Nuevo User</h3>
+					<h3 class="panel-title">Nuevo Reporte</h3>
 				</div>
 				<div class="panel-body">					
 					<div class="table-container">
 
-						<form method="POST" action="{{ route('user.update', $user->id) }}"  role="form">
+						<form method="POST" action="{{ route('reporte.update', $reporte->id) }}"  role="form">
 							{{ csrf_field() }}
 							<input name="_method" type="hidden" value="PATCH">
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 colmd-6">
 									<div class="form-group">
-										<input type="text" name="name" id="nombre" class="form-control input-sm" value="{{$user->name}}">
+										<input type="text" name="name" id="nombre" class="form-control input-sm" value="{{$reporte->name}}">
 									</div>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<textarea name="email" class="form-control input-sm"  placeholder="Resumen">{{$user->email}}</textarea>
+								<textarea name="email" class="form-control input-sm"  placeholder="Resumen">{{$reporte->email}}</textarea>
 							</div>
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 colmd-6">
 									<div class="form-group">
-										<input type="text" name="password" id="password" class="form-control input-sm" value="{{$user->password}}">
+										<input type="text" name="password" id="password" class="form-control input-sm" value="{{$reporte->password}}">
 									</div>
 								</div>
 							</div>
@@ -51,7 +51,7 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 colmd-12">
 									<input type="submit"  value="Actualizar" class="btn btn-success btn-block">
-									<a href="{{ route('user.index') }}" class="btn btn-info btn-block" >Atrás</a>
+									<a href="{{ route('reporte.index') }}" class="btn btn-info btn-block" >Atrás</a>
 								</div>	
 							</div>
 							

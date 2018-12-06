@@ -29,15 +29,14 @@
 action="{{ route('cliente.store') }}" role="form">
 {{ csrf_field() }}
 <div class="row">
-	 <div class="col-xs-6 col-sm-6 colmd-6">
-
-	 	 	 	 	 	 	 	 </div>
 	 	 	 	 	 	 	 	 <div class="col-xs-6 col-sm-6 colmd-6">
 	 	 	 	 	 	 	 	 		 	 <div class="form-group">
 	 	 	 	 	 	 	 	 	 	 <input type="text"
 name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre del Cliente">
 	 	 	 	 	 	 	 	 	 </div>
-	 	 	 	 	 	 	 	 </div>
+										</div>
+										<br>
+										<br>
 <div class="col-xs-6 col-sm-6 colmd-6">
 	 	 	 	 	 	 	 	 	 <div class="form-group">
 	 	 	 	 	 	 	 	 	 	 <input type="text"

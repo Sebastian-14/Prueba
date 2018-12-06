@@ -23,6 +23,9 @@
                         <a class="nav-link" href="cliente">Clientes<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link" href="auto">Autos<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link" href="user">Empleados<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">

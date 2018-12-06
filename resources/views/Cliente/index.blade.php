@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-<div class="row">
+<div class="row" style="padding-left:500px;">
  <section class="content">
  <div class="col-md-8 col-md-offset-2">
  <div class="panel panel-default">
@@ -42,6 +42,7 @@
  {{csrf_field()}}
  <input name="_method" type="hidden" value="DELETE">
  <button class="btn btn-danger btn-xs" type="submit"><span class="far fa-trash-alt"></span></button>
+ </form>
  </td>
  </tr>
  @endforeach 

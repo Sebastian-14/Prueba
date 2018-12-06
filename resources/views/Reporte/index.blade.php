@@ -18,11 +18,11 @@
             <table id="mytable" class="table table-dark">
              <thead>
                
-               <th style="width:500px;">Fecha</th>
-               <th style="width:300px;">Nombre</th>
+               <th style="width:300px;">Fecha-Hora</th>
+               <th style="width:200px;">Cliente</th>
                <th>Vehiculo</th>
-               <th>Detalle</th>
-               <th>Total</th>
+               <th style="width:500px;">Detalle del Mantenimiento</th>
+               <th>Costo</th>
                <th>Editar</th>
                <th>Eliminar</th>
              </thead>
@@ -33,32 +33,12 @@
               @endfor
               -->
 
-              @foreach($reportes as $reporte)              
-              <td>{{$reporte->fecha}}</td>
-              <td>{{$reporte->idR}}
-             <!--   <select name="" id="">
-                @foreach($clientes as $cliente)
-                <option value="">
-                    <p>{{$cliente->nombre}}</p>                      
-                </option>  
-                @endforeach
-                </select>
-              -->
-              </td>
-              <td></td>
-              
-              <td>
-                 
-                  <!--<select name="" id="">
-                    @foreach($mantenimientos as $mantenimiento)
-                    <option value="{{$mantenimiento->id}}">
-                        {{$mantenimiento->nombre}}                      
-                    </option>  
-                    @endforeach
-                  </select>
-                -->
-              </td>  
-              <td></td>    
+              @foreach($reportes as $reporte) 
+              <td>{{$reporte->created_at}}</td>             
+              <td>{{$reporte->cliente}}</td>
+              <td>{{$reporte->auto}}</td>
+              <td>{{$reporte->mant}}<td>                
+              </td>     
               <td><a class="btn btn-primary btn-xs" href="{{action('ReporteController@edit', $reporte->id)}}" ><span class="far fa-edit"></span></a></td>
                 <td>
                   <form action="{{action('ReporteController@destroy', $reporte->id)}}" method="post">
@@ -69,6 +49,7 @@
                  </td> 
                 </tr> 
                 @endforeach 
+                <td>Total</td>
                 @else
                <tr>
                 <td colspan="8">No hay registro !!</td>

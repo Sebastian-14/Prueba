@@ -20,7 +20,7 @@
 	 	 	 @endif
 	 	 	 <div class="panel panel-default">
 	 	 	 	 <div class="panel-heading">
-	 	 	 	 	 <h3 class="panel-title">Nuevo Libro</h3>
+	 	 	 	 	 <h3 class="panel-title">Actualizar Registro</h3>
 	 	 	 	 </div>
 	 	 	 	 <div class="panel-body">	 	 	 	 	 
 
@@ -30,12 +30,6 @@
 <input name="_method" type="hidden"
 value="PATCH">
 	 	 	 	 	 	 	 <div class="row">
-	 	 	 	 	 	 	 	<div class="col-xs-6 col-sm-6 colmd-6">
-	 	 	 	 	 	 	 	 	 <div class="form-group">
-	 	 	 	 	 	 	 	 	 	 <input type="text"
-name="idcl" id="idcl" class="form-control input-sm" value="{{$cliente->idcl}}">
-	 	 	 	 	 	 	 	 	 </div>
-	 	 	 	 	 	 	 	 </div>
 	 	 	 	 	 	 	 	 <div class="col-xs-6 col-sm-6 colmd-6">
 	 	 	 	 	 	 	 	 	 <div class="form-group">
 	 	 	 	 	 	 	 	 	 	 <input type="text"

@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-<div class="row">
+<div class="row" style="padding-left:500px;">
 	<section class="content">
 		<div class="col-md-8 col-md-oﬀset-2">
 			@if (count($errors) > 0)
@@ -19,26 +19,27 @@
 			</div>
 			@endif
 
-			<div class="panel panel-default">
+			<div class="panel panel-default" style="width:400px;">
 				<div class="panel-heading">
 					<h3 class="panel-title">Nuevo Mantenimiento</h3>
 				</div>
+				<br>
 				<div class="panel-body">					
 					<div class="table-container">
 						<form method="POST" action="{{ route('mantenimiento.store') }}"  role="form">
 							{{csrf_field()}}
-							<div class="row">
-								<div class="col-xs-6 col-sm-6 colmd-6">
+							<div class="row" style="width:850px;">
+								<div class="col-xs-6 col-sm-6 colmd-6" >
 									<div class="form-group">
 										<input type="text" name="nombre" id="nombre" class="form-control input-sm" placeholder="Nombre">
 									</div>
 								</div>
 							</div>
-
+							
 							<div class="form-group">
 								<textarea name="descripcion" class="form-control input-sm" placeholder="Descripcion"></textarea>
 							</div>
-							<div class="row">
+							<div class="row" style="width:850px;">
 								<div class="col-xs-6 col-sm-6 colmd-6">
 									<div class="form-group">
 										<input type="number" name="costo" id="costo" class="form-control input-sm" placeholder="Costo del mantenimiento">

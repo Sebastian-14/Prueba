@@ -10,6 +10,6 @@ class Auto extends Eloquent
     protected $connection ='mongodb';
     protected $collection='Auto';
 
-    protected $fillable=['idcl','idau','placa','marca','color','modelo','año'];
+    protected $fillable=['cliente','placa','marca','color','modelo','año'];
 }
 

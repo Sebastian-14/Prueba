@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-<div class="row">
+<div class="row" style="padding-left:500px;">
 <section class="content">
 	 	 <div class="col-md-8 col-md-offset-2">
 
@@ -32,14 +32,14 @@ action="{{ route('auto.store') }}" role="form">
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12">
 	 	 	 	 	 	 	 	 		 	 <div class="form-group">
-	 	 	 	 	 	 	 	 	 	 <input type="text"
-name="idcl" id="idcl" class="form-control input-sm" placeholder="Id del Cliente">
-	 	 	 	 	 	 	 	 	 </div>
-	 	 	 	 	 	 	 	 </div>
-	 	 	 	 	 	 	 	 <div class="col-xs-12 col-sm-12 col-md-12">
-	 	 	 	 	 	 	 	 		 	 <div class="form-group">
-	 	 	 	 	 	 	 	 	 	 <input type="text"
-name="idau" id="idau" class="form-control input-sm" placeholder="Id del Auto">
+												<label for="">Seleccione cliente:</label>
+												<select name="cliente" id="cliente">
+														@foreach($clientes as $cliente)
+														<option value="{{$cliente->nombre}}">
+															<p>{{$cliente->nombre}}</p>                      
+														</option>  
+														@endforeach
+												</select>
 	 	 	 	 	 	 	 	 	 </div>
 	 	 	 	 	 	 	 	 </div>
 	 	 	 	 	 	 	 	 <div class="col-xs-12 col-sm-12 col-md-12">
