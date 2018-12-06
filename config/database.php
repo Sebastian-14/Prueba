@@ -98,10 +98,10 @@ return [
         'mongodb' => [ 
             'driver'    =>  'mongodb', 
             'host'      =>  ['mongodb://sebas:14121999sebastian.@ds149742.mlab.com:49742/integrador'],
-            'port'      =>  env('DB_PORT',27017),
-            'database'  =>  env('DB_DATABASE'),
-            'username'  =>  env('DB_UERNAME'),
-            'password'  =>  env('DB_PASSWORD'),
+            'port'      =>  env('DB_PORT','49742'),
+            'database'  =>  env('DB_DATABASE','integrador'),
+            'username'  =>  env('DB_UERNAME','sebas'),
+            'password'  =>  env('DB_PASSWORD','14121999sebastian.'),
             'options'   =>  [
                 'db'    =>'admin'
             ]
